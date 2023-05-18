@@ -1,19 +1,19 @@
 body {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-}
-body{
+    margin-top: 100px;
     height: 100%;
     width: 100%;
 }
 
 #container {
-    margin: auto auto auto auto;
+    margin: 0;
     height: 50%;
     width: 50%;
     border: solid black 1px;
     display: grid;
+    grid-template-columns: repeat(16, 1fr);
 }
 
 .box {
