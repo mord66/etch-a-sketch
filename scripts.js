@@ -1,5 +1,9 @@
 const container = document.getElementById("container");
 const buttons = document.getElementsByClassName("btn");
+const sliderValue = document.getElementById("sliderValue");
+const slider = document.getElementById("slider");
+
+
 
 for (var i = 0; i < buttons.length; i++){
     buttons[i].addEventListener("click", clickedFunction);
@@ -26,17 +30,18 @@ for (i=1; i<=256; i++){
     container.appendChild(div);
 }
 
-var slider = document.getElementById("slider");
+
 function updateValue(){
     const value=slider.value;
     return value;
 }
 
 
+
 slider.addEventListener("input", function() {
     const num = parseInt(updateValue());
     makeGrid(num);
-    console.log(num);
+    sliderValue.innerHTML= slider.value + "x" + slider.value;
 })
 
 
