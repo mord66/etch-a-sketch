@@ -9,6 +9,8 @@ const randomButton = document.querySelector(".random");
 const color ="";
 
 // Add clicked effect to buttons //
+
+blackButton.classList.add("clicked");
 for (var i = 0; i < buttons.length; i++){
     buttons[i].addEventListener("click", clickedFunction);
 }
@@ -34,8 +36,13 @@ function makeGrid(num){
     container.innerHTML = ""; // Clear previous grid
         for (i=1; i<=num*num; i++){
             let div = document.createElement("div");
-            div.addEventListener("click", function(){
-                this.style.backgroundColor = "black";
+            div.addEventListener("mouseover", function(){
+                if(blackButton.classList.contains("clicked")){
+                    this.style.backgroundColor = "black";
+                }
+                else if (whiteButton.classList.contains("clicked")){
+                    this.style.backgroundColor = "white";
+                }
             })
             div.classList.add("box");
             container.appendChild(div);
