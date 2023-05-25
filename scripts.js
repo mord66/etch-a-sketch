@@ -56,3 +56,4 @@ function makeGrid(num){
                 }
         
 }
+const allBoxes = document.querySelectorAll(".box");
